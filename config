@@ -52,6 +52,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+#take as screenshot
+bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui -d 5000
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -74,8 +78,8 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 #move the workspace from monitor
-bindsym $mod+Shift+m move workspace to output HDMI-1
-bindsym $mod+Shift+s move workspace to output DVI-I-1
+bindsym $mod+Shift+o move workspace to output HDMI-1
+bindsym $mod+Shift+p move workspace to output DVI-I-1
 
 # change focus
 bindsym $mod+h focus left
